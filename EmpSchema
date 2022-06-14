@@ -1,0 +1,35 @@
+const mongoose = require('mongoose')
+
+const AddSchema = new mongoose.Schema({
+
+    Name: {
+                type:String,
+                required:true,
+
+    },
+    Age:{
+            type:Number,
+            required:true
+    },
+    Surname: {
+            type:String,
+            required:true
+    },
+    Position: {
+             type:String,
+             required:true
+           
+    },
+    Phone: {
+        
+        type:Number,
+        required:true
+      
+},
+
+
+});
+
+ const Adder = mongoose.model("EmpSchema",AddSchema)
+ 
+ module.exports= Adder ;
